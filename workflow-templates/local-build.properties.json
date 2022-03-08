@@ -1,0 +1,8 @@
+{
+    "name": "Organization Workflow",
+    "description": "Organization CI starter workflow for local builds",
+    "iconName": "example-icon",
+    "filePatterns": [
+        "^Dockerfile"
+    ]
+}
