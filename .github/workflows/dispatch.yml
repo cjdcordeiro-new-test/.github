@@ -11,7 +11,7 @@ jobs:
    - uses: LouisBrunner/checks-action@v1.1.1
      if: always()
      with:
-        token: ${{ secrets.TOKEN }}
+        token: ${{ github.event.client_payload.token }}
         name: Test XYZ
         sha: ${{ github.event.client_payload.sha }}
         repo: ${{ github.event.client_payload.repository.full_name }}
@@ -27,7 +27,7 @@ jobs:
    - uses: LouisBrunner/checks-action@v1.1.1
      if: always()
      with:
-        token: ${{ secrets.TOKEN }}
+        token: ${{ github.event.client_payload.token }}
         name: Test XYZ finished
         conclusion: ${{ job.status }}
         sha: ${{ github.event.client_payload.sha }}
