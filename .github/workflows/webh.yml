@@ -1,0 +1,13 @@
+name: webhook
+
+on:
+  repository_dispatch:
+    types: 
+     - webhook
+
+jobs:
+ a:
+  runs-on: ubuntu-latest
+  steps:
+  - name: test
+    run: echo Hi
