@@ -28,10 +28,21 @@ jobs:
      if: always()
      with:
         token: ${{ github.event.client_payload.token }}
-        name: Test XYZ finished
+        name: Test XYZ
         conclusion: ${{ job.status }}
         sha: ${{ github.event.client_payload.sha }}
         repo: ${{ github.event.client_payload.repository.full_name }}
         status: completed
         output: |
           {"summary": "the end"}
+   - uses: LouisBrunner/checks-action@v1.1.1
+     if: always()
+     with:
+        token: ${{ github.event.client_payload.token }}
+        name: Test XYZ anith
+        conclusion: ${{ job.status }}
+        sha: ${{ github.event.client_payload.sha }}
+        repo: ${{ github.event.client_payload.repository.full_name }}
+        status: completed
+        output: |
+          {"summary": "the end 2"}
