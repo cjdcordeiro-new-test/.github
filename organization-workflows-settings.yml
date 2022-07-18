@@ -1,5 +1,0 @@
-workflows_repository: .builder
-include_workflows_repository: false
-exclude:
-  repositories:
-  - '.admin'
