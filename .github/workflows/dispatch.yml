@@ -16,7 +16,6 @@ jobs:
         sha: ${{ github.event.client_payload.sha }}
         repo: ${{ github.event.client_payload.repository.full_name }}
         status: in_progress
-        action_url: ${{ github.event.client_payload.callback_url }}
         output: |
           {"summary": "foo"}
    - name: Checkout
@@ -34,6 +33,5 @@ jobs:
         sha: ${{ github.event.client_payload.sha }}
         repo: ${{ github.event.client_payload.repository.full_name }}
         status: completed
-        action_url: ${{ github.event.client_payload.callback_url }}
         output: |
           {"summary": "the end"}
