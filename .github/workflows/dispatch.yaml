@@ -6,7 +6,6 @@ on:
 
 jobs:
   send-report-to-rock:
-   if: ${{ !github.event.client_payload.passed }}
    runs-on: ubuntu-latest
    steps:
    - name: Register the build in the original commit
